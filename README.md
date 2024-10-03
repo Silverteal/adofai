@@ -1,6 +1,6 @@
 # ADOFAI
 
-*和 A Dance Of Fire And Ice （中文名“冰与火之舞”）没有任何关系*
+*本项目和 A Dance Of Fire And Ice （中文名“冰与火之舞”）没有任何关系*
 
 ADOFAI (Adjustable Data Objects For Authlib Injector) 是一组数据模型和配套工具，旨在简化自定义实现 Authlib-injector 的规范
 Yggdrasil 服务端、客户端及其配套程序的过程。
@@ -8,6 +8,14 @@ Yggdrasil 服务端、客户端及其配套程序的过程。
 Yggdrasil 是游戏 Minecraft 中身份验证服务的实现名称。
 
 ## 快速开始
+
+### 安装
+
+```shell
+pip install adofai
+```
+
+### 示例
 
 ```python
 from adofai import GameName, GameProfile, TextureProfile, TextureProperty, TextureUrl
