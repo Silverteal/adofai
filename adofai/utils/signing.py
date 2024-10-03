@@ -13,7 +13,7 @@ from Crypto.Signature import pkcs1_15
 
 @lru_cache(maxsize=1)
 def dummy_key(length: int = 2048) -> RsaKey:
-    """在不需要持久化签名密钥的场景下生成签名密钥的快捷方式，密钥长度至少为2048"""
+    """在不需要持久化签名密钥的场景下使用统一签名密钥的快捷方式，密钥长度至少为2048，标准推荐为4096"""
     return RSA.generate(length)
 
 

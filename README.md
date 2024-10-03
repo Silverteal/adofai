@@ -5,6 +5,8 @@
 ADOFAI (Adjustable Data Objects For Authlib Injector) 是一组数据模型和配套工具，旨在简化自定义实现 Authlib-injector 的规范
 Yggdrasil 服务端、客户端及其配套程序的过程。
 
+Yggdrasil 是游戏 Minecraft 中身份验证服务的实现名称。
+
 ## 快速开始
 
 ```python
@@ -32,3 +34,8 @@ game_profile = GameProfile(
 print(game_profile.serialize("full", dummy_key()))
 
 ```
+
+## 另请参阅
+
+[Yggdrasil Scaffold](https://github.com/silverteal/yggdrasil-scaffold) 是基于 ADOFAI 和 FastAPI 的 Yggdrasil
+身份验证协议实现脚手架。
