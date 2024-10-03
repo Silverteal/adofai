@@ -10,8 +10,8 @@ from base64 import b64decode, b64encode
 from random import choice, randint
 from uuid import uuid4
 
-from adofai import AccessToken, GameId, GameName, GameProfile, TextureProfile, TextureProperty, TextureUrl, UserId, \
-    UserProfile
+from adofai import AccessToken, GameId, GameName, TextureUrl, UserId
+from adofai.models import GameProfile, TextureProfile, TextureProperty, UserProfile
 from adofai.utils.uuid import offline_uuid
 
 

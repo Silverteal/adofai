@@ -18,7 +18,8 @@ pip install adofai
 ### 示例
 
 ```python
-from adofai import GameName, GameProfile, TextureProfile, TextureProperty, TextureUrl
+from adofai import GameName, TextureUrl
+from adofai.models import GameProfile, TextureProfile, TextureProperty
 from adofai.utils.uuid import offline_uuid
 from adofai.utils.signing import dummy_key
 
