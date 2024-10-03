@@ -6,7 +6,7 @@ license = "MIT"
 authors = ["Silverteal <67404722+Silverteal@users.noreply.github.com>"]
 readme = "README.md"
 repository = "https://github.com/Silverteal/adofai"
-keywords = ["minecraft", "mc", "authlib", "injector", "implementaion", "abc", "yggdrasil"]
+keywords = ["minecraft", "mc", "authlib", "authlib-injector", "implementaion", "abc", "yggdrasil"]
 
 [tool.poetry.dependencies]
 python = "^3.12"
