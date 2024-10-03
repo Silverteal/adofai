@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "adofai"
+version = "0.1.0-dev"
+description = "Shared data model for authlib-injector yggdrasil implementation and Minecraft API services"
+authors = ["Silverteal <67404722+Silverteal@users.noreply.github.com>"]
+readme = "README.md"
+license = "MIT"
+keywords = ["minecraft", "mc", "authlib", "injector", "implementaion", "abc", "yggdrasil"]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pycryptodome = "^3.21.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
