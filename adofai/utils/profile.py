@@ -11,30 +11,31 @@ from random import choice, randint
 from uuid import uuid4
 
 from adofai import AccessToken, GameId, GameName, TextureUrl, UserId
-from adofai.models import GameProfile, TextureProfile, TextureProperty, UserProfile
+from adofai.models import FulfilledGameProfile, GameProfile, PartialGameProfile, TextureProfile, TextureProperty, \
+    UserProfile
 from adofai.utils.uuid import offline_uuid
 
 
 # 可能是这个模块里唯一一个正经函数
-def offline_game_profile(name: GameName) -> GameProfile:
+def offline_game_profile(name: GameName) -> PartialGameProfile:
     """根据玩家名快速生成离线玩家档案"""
-    return GameProfile(id=offline_uuid(name), name=name)
+    return PartialGameProfile(GameProfile(id=offline_uuid(name), name=name))
 
 
 # fake game profile
-def prompt_game_profile(info: str) -> GameProfile:
+def prompt_game_profile(info: str) -> PartialGameProfile:
     """生成用于文本提示的伪玩家档案，应用场景较少，但不是没有"""
-    return GameProfile(GameId(uuid4()), GameName(info))
+    return PartialGameProfile(GameProfile(GameId(uuid4()), GameName(info)))
 
 
-def random_game_profile() -> GameProfile:
+def random_game_profile() -> FulfilledGameProfile:
     """用于测试用途的随机玩家档案"""
-    return GameProfile(
+    return FulfilledGameProfile(GameProfile(
         id=offline_uuid(a := GameName("player" + str(randint(1000, 9999)))),
         name=a,
         texture=random_texture(),
         extra_properties={"uploadableTextures": choice(("skin", "cape", "skin,cape"))}
-    )
+    ))
 
 
 # fake texture profile
