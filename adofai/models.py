@@ -114,6 +114,19 @@ class TextureProfile:
                 del i["metadata"]
         return b64encode(json.dumps(structure, ensure_ascii=False).encode()).decode()
 
+    def __repr__(self) -> str:
+        structure = {
+            k: {
+                "url": v.url,
+                "metadata": v.metadata
+            }
+            for k, v in self.textures.items()
+        }
+        for i in structure.values():
+            if i["metadata"] is None:
+                del i["metadata"]
+        return f"TextureProfile{structure}"
+
 
 class UserProfile:
     """用户档案数据类"""
@@ -172,6 +185,9 @@ class UserProfile:
                 for k, v in self.properties.items()
             ]
         }
+
+    def __repr__(self) -> str:
+        return f"UserProfile{self.serialize()}"
 
 
 class GameProfile:
@@ -321,6 +337,9 @@ class GameProfile:
             token["signature"] = sign_property(token["value"], key)
 
         return structure
+
+    def __repr__(self) -> str:
+        return f"GameProfile{self.serialize("unsigned")}"
 
 
 PartialGameProfile = NewType("PartialGameProfile", GameProfile)  # 可不含属性
