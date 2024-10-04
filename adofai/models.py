@@ -1,11 +1,12 @@
 # coding=utf-8
 """定义基本模型"""
-__all__ = ["TextureProperty", "TextureProfile", "UserProfile", "GameProfile"]
+__all__ = ["TextureProperty", "TextureProfile", "UserProfile", "GameProfile",
+           "PartialGameProfile", "FulfilledGameProfile"]
 
 import json
 from base64 import b64decode, b64encode
 from time import time_ns
-from typing import Any, Iterable, Literal, Mapping, Optional, Self, overload
+from typing import Any, Iterable, Literal, Mapping, NewType, Optional, Self, overload
 from uuid import UUID
 
 from Crypto.PublicKey.RSA import RsaKey
@@ -320,3 +321,7 @@ class GameProfile:
             token["signature"] = sign_property(token["value"], key)
 
         return structure
+
+
+PartialGameProfile = NewType("PartialGameProfile", GameProfile)  # 可不含属性
+FulfilledGameProfile = NewType("FulfilledGameProfile", GameProfile)  # 含完整属性
