@@ -11,7 +11,7 @@ from uuid import UUID
 
 from Crypto.PublicKey.RSA import RsaKey
 
-from adofai import (GameId, GameName, ProfileProperties, SerializedProfile, TextureUrl, UserId)
+from adofai import GameId, GameName, ProfileProperties, SerializedProfile, TextureUrl, UserId
 from adofai.utils.signing import sign_property
 from adofai.utils.uuid import offline_uuid, uuid_to_str
 
@@ -265,6 +265,11 @@ class GameProfile:
             self.extra_properties = params["extra_properties"]
         else:
             self.extra_properties = {i["name"]: i["value"] for i in params["extra_properties"]}
+
+    @property
+    def uuid(self) -> GameId:
+        """alias to ``id``"""
+        return self.id
 
     @classmethod
     def deserialize(cls, src: SerializedProfile) -> Self:

@@ -48,3 +48,6 @@ print(game_profile.serialize("full", dummy_key()))
 
 [Yggdrasil Scaffold](https://github.com/silverteal/yggdrasil-scaffold) 是基于 ADOFAI 和 FastAPI 的 Yggdrasil
 身份验证协议实现脚手架。
+
+[Yggdrasil Client](https://github.com/Silverteal/yggdrasil-client) 是基于 ADOFAI 和 aiohttp 的 Minecraft Yggdrasil
+协议兼容客户端，支持 Mojang 后端。
