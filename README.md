@@ -19,8 +19,8 @@ pip install adofai
 
 ```python
 from adofai import GameName, TextureUrl
-from adofai.models import GameProfile, TextureProfile, TextureProperty
-from adofai.utils.uuid import offline_uuid
+from adofai.legacy.models import GameProfile, TextureProfile, TextureProperty
+from adofai.utils.uuids import offline_uuid
 from adofai.utils.signing import dummy_key
 
 texture = TextureProfile(

@@ -11,6 +11,7 @@ keywords = ["minecraft", "mc", "authlib", "authlib-injector", "implementaion", "
 [tool.poetry.dependencies]
 python = "^3.12"
 pycryptodome = "^3.21.0"
+pydantic = "^2.9.2"
 
 [build-system]
 requires = ["poetry-core"]

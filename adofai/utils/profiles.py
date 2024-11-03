@@ -11,9 +11,9 @@ from random import choice, randint
 from uuid import uuid4
 
 from adofai import AccessToken, GameId, GameName, TextureUrl, UserId
-from adofai.models import FulfilledGameProfile, GameProfile, PartialGameProfile, TextureProfile, TextureProperty, \
+from adofai.legacy.models import FulfilledGameProfile, GameProfile, PartialGameProfile, TextureProfile, TextureProperty, \
     UserProfile
-from adofai.utils.uuid import offline_uuid
+from adofai.utils.uuids import offline_uuid
 
 
 # 可能是这个模块里唯一一个正经函数
